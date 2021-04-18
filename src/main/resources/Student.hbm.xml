@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http:www.hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.bhavesh.Student" table="STUDENT_DETAILS_TABLE">
+		<id name="rollNo">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="fname" column="FIRST_NAME"></property>
+		<property name="lname" column="LAST_NAME"></property>
+		<many-to-one name="addr" class="com.bhavesh.Address" unique="true" not-null="true" cascade="all" column="ADDRESS_ID"></many-to-one>
+		
+		<set name="subjects" cascade="all">
+			<key column="STUDENT_ROLL_NO"></key>
+			<one-to-many class="com.bhavesh.SubjectDetails"/>
+		</set>
+	</class>
+</hibernate-mapping>

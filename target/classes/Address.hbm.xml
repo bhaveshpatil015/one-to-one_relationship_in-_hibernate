@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http:www.hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.bhavesh.Address" table="STUDENT_ADDRESS_TABLE">
+		<id name="addId">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="city" column="CITY_NAME"></property>
+		<property name="pin" column="PIN_CODE"></property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http:www.hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.bhavesh.SubjectDetails" table="SUBJECT_DETAILS_TABLE">
+		<id name="subjectCode">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="externalMarks"></property>
+		<property name="internalMarks"></property>
+		<property name="name" column="SUBJECT_NAME"></property>
+	</class>
+</hibernate-mapping>
